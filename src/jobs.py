@@ -6,4 +6,4 @@ from csv import DictReader
 def read(path):
     with open(path) as file:
         data = DictReader(file, delimiter=",")
-    return list(data)
+        return list(data)
