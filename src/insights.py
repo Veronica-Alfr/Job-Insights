@@ -1,5 +1,6 @@
 from src.jobs import read
 
+
 def get_unique_job_types(path):
     file = read(path)
     data_filter = set()
@@ -7,6 +8,7 @@ def get_unique_job_types(path):
         types = row["job_type"]
         data_filter.add(types)
     return data_filter
+
 
 def filter_by_job_type(jobs, job_type):
     """Filters a list of jobs by job_type
