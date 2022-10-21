@@ -45,8 +45,6 @@ def get_max_salary(path):
             data_filter_max_salary.add(int(max_salary))
     return max(data_filter_max_salary)
 
-    pass
-
 
 def get_min_salary(path):
     file = read(path)
@@ -56,8 +54,6 @@ def get_min_salary(path):
         if min_salary != "" and min_salary.isdigit():
             data_filter_min_salary.add(int(min_salary))
     return min(data_filter_min_salary)
-
-    pass
 
 
 def matches_salary_range(job, salary):
