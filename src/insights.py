@@ -71,22 +71,13 @@ def matches_salary_range(job, salary):
         raise ValueError("min_salary can't be greather than max_salary")
     return job["min_salary"] <= salary <= job["max_salary"]
 
-    pass
-
 
 def filter_by_salary_range(jobs, salary):
-    """Filters a list of jobs by salary range
-
-    Parameters
-    ----------
-    jobs : list
-        The jobs to be filtered
-    salary : int
-        The salary to be used as filter
-
-    Returns
-    -------
-    list
-        Jobs whose salary range contains `salary`
-    """
-    return []
+    jobs_based_on_salary = []
+    for job in jobs:
+        try:
+            if matches_salary_range(job, salary):
+                jobs_based_on_salary.append(job)
+        except ValueError:
+            print("Salary is not passed")
+    return jobs_based_on_salary
